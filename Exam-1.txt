@@ -1,3 +1,5 @@
+Problem 3
+
 def twoQuadratics(a1, b1, c1, x1, a2, b2, c2, x2):
     def evalQuadratic(a, b, c, x):
         return a*x*x + b*x + c;
