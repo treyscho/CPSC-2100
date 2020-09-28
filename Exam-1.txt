@@ -4,3 +4,51 @@ def twoQuadratics(a1, b1, c1, x1, a2, b2, c2, x2):
     def evalQuadratic(a, b, c, x):
         return a*x*x + b*x + c;
     return (evalQuadratic(a1, b1, c1, x1) + evalQuadratic(a1, b2, c2, x2))
+
+Problem 4
+
+def deep_reverse(L):
+    L.reverse();
+    for i in L:
+       i.reverse();
+    print(L)
+
+Problem 5
+
+def dict_invert(d):
+    newD = {};
+    for j in d:
+        print(j);
+        cam = newD.get(d[j], list())
+        cam.append(j);
+        newD[d[j]] = cam;
+    return newD;
+
+Problem 6
+
+def max_val(t):
+    maxVal = 0;
+    #print(isinstance(t, int));
+    if isinstance(t, int):
+        #print(t);
+        if t > maxVal:
+            print(maxVal);
+            print(t);
+            #print(t > maxVal);
+            maxVal=t;
+    else:
+        for item in t:
+            max_val(item);
+    return maxVal;
+    
+Problem 7
+
+def f(s):
+    return 'a' in s;
+def run_satisfiesF(L, satisfiesF):
+    print(satisfiesF(L));
+def satisfiesF(L):
+    for i in L:
+        if f(i) == True:
+            L.remove(i);
+    return L
